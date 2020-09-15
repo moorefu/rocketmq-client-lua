@@ -1,5 +1,5 @@
 package = "rocketmq"
-version = "2.1.0.0-1"
+version = "2.1.0.0-0"
 source = {
    url = "git+https://github.com/moorefu/rocketmq-client-lua.git",
    tag = "2.1.0.0"
