@@ -45,8 +45,8 @@ luarocks install rocketmq-client-lua --server=https://luarocks.org/manifests/moo
 ### Producer
 
 ```lua
-local Producer = require("resty.rocketmq").Producer
-local Message = require("resty.rocketmq").Message
+local Producer = require("rocketmq").Producer
+local Message = require("rocketmq").Message
 
 local producer = Producer:new('PID-XXX')
 producer:set_name_server_address('127.0.0.1:9876')
@@ -64,8 +64,8 @@ producer:shutdown()
 ### PushConsumer
 
 ```lua
-local PushConsumer = require("resty.rocketmq").PushConsumer
-local ConsumeStatus = require("resty.rocketmq").ConsumeStatus
+local PushConsumer = require("rocketmq").PushConsumer
+local ConsumeStatus = require("rocketmq").ConsumeStatus
 
 local callback = function(msg)
     ngx.say(string.format("%s,%s", msg:id(),msg:body()))
